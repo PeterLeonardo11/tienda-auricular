@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* --- NAV (Barra de menu) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%; /* 8% a los lados para centrar visuelmente */
+    position: absolute; /* Para que quede sobre el fondo */
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.color-dot {
+    color: #e2d523;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn-nav {
+    background-color: #333;
+    color: #fff !important;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #e2d523;
+    color: #000 !important;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: relative;
+}
+
+/* Lado izquierdo: Texto */
+.hero-text {
+    max-width: 500px; /* Limitamos el ancho para que no se estire mucho */
+    z-index: 2;
+}
+
+.hero-text h4 {
+    color: #e2d523;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #e2d523;
+}
+
+/* Botones */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    background-color: #e2d523;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(226, 213, 35, 0.4);
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+/* Lado derecho img */
+.hero-img {
+    position: relative;
+    width: 45%;
+}
+
+.hero-img img {
+    width: 100%;
+    transform: rotate(-15deg);
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    transition: 0.5s;
+}
+
+/* Animacion simple: Al pasar el mouse por la imagen, se endereza */
+.hero-img img:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* El circulo decorativo detrtas de la imagen */
+.circle-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: #e2d523;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.2;
+}

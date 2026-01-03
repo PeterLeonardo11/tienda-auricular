@@ -7,7 +7,7 @@
 
 body {
     background-color: #f3f3f3;
-    color: #333;
+    color: #444;
     overflow-x: hidden;
 }
 
@@ -156,4 +156,57 @@ body {
     border-radius: 50%;
     z-index: 1;
     opacity: 0.2;
+}
+
+
+/* ----- SECCIÓN DE CARACTERÍSTICAS ----- */
+.features {
+    padding: 100px 8%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-box {
+    flex-basis: 30%; /* Cada caja intenta ocupar un 30 del ancho */
+    padding: 30px 20px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+/* Efecto: Al pasar el mouse la caja sube y tiene una sombra suave */
+.feature-box:hover {
+    background-color: #fffcf0; /* Un fondo amarillo muuy clarito */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+}
+
+/* Contenedor del icono (el circulo amarillo) */
+.icon-container {
+    display: inline-block; /* Para que el contenedor se ajuste al tamaño del icono */
+    width: 80px;
+    height: 80px;
+    background-color: #f9ca24;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 32px;
+    line-height: 80px; /* Truco para centrar vertical,emte el icono enuna linea */
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(247, 204, 48, 0.5);
+}
+
+.feature-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-box p {
+    color: #777;
+    line-height: 1.6;
+    font-size: 15px;
+    padding: 0 15px;
 }
